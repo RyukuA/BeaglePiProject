@@ -12,6 +12,24 @@ class Gpio {
 public:
 	Gpio();
 	virtual ~Gpio();
+
+	char* GetDirection();
+	void SetDirection();
+
+	char* GetGpio();
+	void SetGpio();
+
+	char* GetValue();
+	void SetValue();
+
+	void exportV();
+	void unexport();
+
+private:
+	char* gpio;
+	char* directory;
+	char* direction;
+	char* value;
 };
 
 #endif /* RASPBERRY_GPIO_HPP_ */
